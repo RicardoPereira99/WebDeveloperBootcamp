@@ -12,12 +12,32 @@
     <!-- action - where the form send data to -->
     <!-- method - what HTTP method (get/post) -->
     <form>
-        <input name="username" type="text" placeholder="username">
-        <input name="password" type="password" placeholder="password">
+        <label>
+            Username:
+            <input name="username" type="text" placeholder="username">
+        </label>
+
+        <label>
+            Password:
+            <input name="password" type="password" placeholder="password">
+        </label>
+
+
         <input type="submit">
     </form>
 
+    <!-- OR -->
 
+    <form>
+        <label for="username">Username:</label>
+        <input name="username" id="username" type="text" placeholder="username">
+
+        <label for="password">Password:</label>
+        <input name="password" id="password" type="password" placeholder="password">
+
+
+        <input type="submit">
+    </form>
 
 </body>
 
