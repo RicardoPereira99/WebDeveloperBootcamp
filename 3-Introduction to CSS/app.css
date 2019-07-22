@@ -1,11 +1,19 @@
 h1 {
-    color:red;
-}
+    color: rgba(0, 200, 100, 0.8);
+    /* border-color: purple;
+    border-width: 5px;
+    border-style: solid; */
 
-li {
-    color:green;
+    border:5px solid purple;
 }
 
 h4 {
-    color:purple;
+    background: rgb(255, 100, 80)
+}
+
+body {
+    background:pink;
+    /* background: url("https://cdn.shopify.com/s/files/1/0834/4341/products/WG1140_D_600x.jpg?v=1466897174"); 
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
