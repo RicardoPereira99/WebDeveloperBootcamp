@@ -1,0 +1,48 @@
+body {
+    color :red;
+}
+
+ul {
+    color: blue;
+}
+
+li {
+    color: orange;
+}
+
+.highlight {
+    color: yellow;
+}
+
+#special {
+    color: pink;
+}
+
+/* THE HIGHER THE SPECIFICITY THE BETTER */
+
+/* Type Selectors LESS SPECIFICITY*/
+li {
+
+}
+
+li a {
+
+}
+
+li + a{
+
+}
+
+/* Class, Attribute, and Pseudo-Slass Selectors MEDIUM SPECIFICITY */
+.hello {
+
+}
+
+input[type="text"] {
+
+}
+
+/* ID´S HIGH SPECIFICITY*/
+#hi {
+    
+}
