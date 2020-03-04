@@ -1,17 +1,23 @@
-var colors = generateRandomColors(6);
+var numberOfSquares = 6;
+
+var colors = generateRandomColors(numberOfSquares);
 
 var squares = document.querySelectorAll(".square");
 
 var h1 = document.querySelector("h1");
 
 var resetButton = document.getElementById("reset");
+var easyBtn = document.querySelector("#easyBtn");
+var hardBtn = document.querySelector("#hardBtn");
 
 var pickedColor = pickColor();
 
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.getElementById("message");
 
+
 colorDisplay.textContent = pickedColor;
+
 
 for (var index = 0; index < squares.length; index++) {
     //add initial colors to squares
@@ -81,7 +87,7 @@ function randomColor() {
 
 resetButton.addEventListener("click", function() {
    //generate all new colors
-   colors = generateRandomColors(6);
+   colors = generateRandomColors(numberOfSquares);
    //pick a new random color from array
    pickedColor = pickColor();
    //change color display to match picked color
@@ -94,4 +100,49 @@ resetButton.addEventListener("click", function() {
    h1.style.backgroundColor = "#232323";
    resetButton.textContent = "New Colors";
    messageDisplay.textContent = "";
+});
+
+
+easyBtn.addEventListener("click", function() {
+    easyBtn.classList.add("selected");
+    hardBtn.classList.remove("selected");
+
+    numberOfSquares = 3;
+
+    colors = generateRandomColors(numberOfSquares);
+
+    pickedColor = pickColor();
+
+    colorDisplay.textContent = pickedColor;
+
+    for (let index = 0; index < squares.length; index++) {
+        if (colors[index]) {
+            squares[index].style.backgroundColor = colors[index];
+        }
+        else{
+            squares[index].style.display = "none";
+        }
+        
+    }
+});
+
+hardBtn.addEventListener("click", function() {
+    easyBtn.classList.remove("selected");
+    hardBtn.classList.add("selected");
+
+    numberOfSquares = 6;
+
+    colors = generateRandomColors(numberOfSquares);
+
+    pickedColor = pickColor();
+
+    colorDisplay.textContent = pickedColor;
+
+    for (let index = 0; index < squares.length; index++) {
+        
+        squares[index].style.backgroundColor = colors[index];
+        squares[index].style.display = "block";
+        
+        
+    }
 });
