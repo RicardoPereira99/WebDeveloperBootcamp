@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Demo</title>
+
+    <!-- example of jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h1>jQuery DEMO</h1>
+    <ul>
+        <li>Cao <a href="google.com">google.com</a> </li>
+        <li>Gato</li>
+        <li id="passaro">Passaro</li>
+    </ul>
+
+</body>
+
+</html>
+
+<!-- 
+
+    $("") -> equivale a usar querySelectorAll
+    
+    Usar isto na console do browser
+
+    $("h1")[0] -> retorna  <h1>jQuery DEMO</h1>
+
+    $("li") -> retorna todos os objetos li
+
+    $("li a") -> retorna <a href="google.com">google.com</a>
+
+    $("#passaro") -> retorna <li id="passaro">Passaro</li>
+
+    $("h1").css("color","yellow") -> Muda a cor do h1 para amarelo
+
+    var styles = {
+        color: "red",
+        background: "pink",
+        border: "2px solid purple"
+    }
+
+    $("h1").css(styles)
+
+
+    $("li").css("color","blue") -> seleciona todos li's e muda a cor de todos para azul
+
+ -->
