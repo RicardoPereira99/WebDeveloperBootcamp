@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Events Click</title>
+
+    <!-- example of jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <h1>jQuery Events</h1>
+
+
+    <input type="text">
+
+    <button>Don't Click me</button>
+    <button>Please, don't click me</button>
+    <button>Last warning</button>
+    
+</body>
+</html>
+
+
+
+
+<!-- 
+
+    $("input[type='text']").keypress(function(){
+        alert("You pressed a key!");
+    });
+
+    $("input[type='text']").keypress(function(event){
+        if(event.which === 13 ){
+            alert("You pressed enter!");
+            $(this).val("Enter pressed!");
+        }
+    }); 
+    
+
+ -->
