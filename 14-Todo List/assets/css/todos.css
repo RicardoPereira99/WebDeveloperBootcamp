@@ -1,4 +1,10 @@
+body{
+    font-family: 'Roboto';
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
 h1{
     background: #2980b9;
     color: white;
@@ -15,19 +21,6 @@ ul{
     padding: 0;
 }
 
-
-.fa-plus{
-    float: right;
-}
-
-body{
-    font-family: 'Roboto';
-    background: #2980B9;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
 li{
     background: #fff;
     height: 40px;
@@ -38,6 +31,7 @@ li{
 li:nth-child(2n){
     background: #f7f7f7;
 }
+
 
 input{
     font-size: 18px;
@@ -56,22 +50,6 @@ input:focus{
 }
 
 
-
-#container{
-    width: 360px;
-    margin: 100px auto;
-    background: #f7f7f7;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-}
-
-
-
-
-.completed{
-    color: gray;
-    text-decoration: line-through;
-}
-
 span{
     background: #e74c3c;
     height: 40px;
@@ -89,3 +67,26 @@ li:hover span{
     opacity: 1;
     
 }
+
+.fa-plus{
+    float: right;
+}
+
+.completed{
+    color: gray;
+    text-decoration: line-through;
+}
+
+
+#container{
+    width: 360px;
+    margin: 100px auto;
+    background: #f7f7f7;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
