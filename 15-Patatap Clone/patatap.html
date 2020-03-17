@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,51 @@
 
     <link rel="stylesheet" href="patatap.css">
     <script type="text/javascript" src="paper-full.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.3/howler.js"></script>
 
-        <!-- é importante que o newCircle esteja dividido  -->
+    <!-- é importante que o newCircle esteja dividido  -->
 
     <script type="text/paperscript" canvas="myCanvas">
+
+        var keyData = {
+            a: {
+                color: "purple",
+                sound: new Howl({
+                    src: ['sounds/bubbles.mp3']
+                })
+            },
+            s: {
+                color: "green",
+                sound: new Howl({
+                    src: ['sounds/clay.mp3']
+                })
+            },
+            d: {
+                color: "yellow",
+                sound: new Howl({
+                    src: ['sounds/confetti.mp3']
+                })
+            }
+        }
 
         var circles = [];
 
         function onKeyDown(event){
 
-            var maxPoint = new Point(view.size.width, view.size.height);
-            var randomPoint = Point.random();
-            var point = maxPoint * randomPoint;
+            if(keyData[event.key]){
+                var maxPoint = new Point(view.size.width, view.size.height);
+                var randomPoint = Point.random();
+                var point = maxPoint * randomPoint;
+    
+                var newCircle = new Path.Circle(point, 500);
+                newCircle.fillColor = keyData[event.key].color;
 
-            var newCircle = new Path.Circle(point, 500);
-            newCircle.fillColor = 'orange';
-            circles.push(newCircle);
+                keyData[event.key].sound.play();
+
+                circles.push(newCircle);
+            }            
+
+            
 
         }
 
@@ -35,11 +65,15 @@
 
         }
 
+
+        
     </script>
 </head>
+
 <body>
-    
+
     <canvas id="myCanvas" resize></canvas>
 
 </body>
+
 </html>
